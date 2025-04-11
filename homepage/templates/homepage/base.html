@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head %} 
+{% endblock %}
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href = "{% url 'index' %}">Home</li></a>
+                <li><a href = "{% url 'about' %}">About</li></a>
+                <li><a href = "{% url 'contact' %}">Contact</li></a>
+
+            </ul>
+        </nav>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

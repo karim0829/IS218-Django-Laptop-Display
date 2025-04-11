@@ -1,0 +1,18 @@
+li {
+    list-style: none; 
+    display:inline; 
+    font-size:17px; 
+    margin:15px;
+    
+}  
+* {
+    margin:0; 
+    padding:0;
+}
+.nav {
+    text-align:center; 
+    font-family:"Poppins"; 
+    font-weight:600; 
+    padding:10px; 
+    background-color: rgb(183, 221, 255);
+}
