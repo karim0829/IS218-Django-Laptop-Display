@@ -15,3 +15,12 @@ class Laptop(models.Model):
 
     def __str__(self):
         return f"{self.brand} {self.name}"
+
+class Review(models.Model):
+    laptop = models.ForeignKey(Laptop, on_delete=models.CASCADE)
+    rating = models.IntegerField()
+    comment = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.laptop.name} - {self.rating} Stars"
