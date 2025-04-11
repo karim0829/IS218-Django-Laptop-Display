@@ -1,5 +1,5 @@
 from django.db import models
-
+#
 # Create your models here.
 #database 1 - luis idk if it is good i didnt do anything in terminal because i do not know how to integrate it within my system( You can change if you want , I just wanted to see if this is good ) 
 class Laptop(models.Model):
