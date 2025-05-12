@@ -1,0 +1,151 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - LaptopStore</title>
+    <!-- Bootstrap CSS for layout and components -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">LaptopStore</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="HighEndLaptop.html">High End Laptop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="StudioLaptops.html">Studio Laptop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="BudgetLaptops.html">Budget Laptop</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search laptops"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+        <ul class="navbar-nav ml-3">
+          <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="support.html">Support</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- About Us Hero Section -->
+    <section class="about-hero text-center">
+      <div class="about-hero-overlay">
+        <div class="container">
+          <h1 class="display-4 text-white">About Us</h1>
+          <p class="lead text-white">Your Trusted Laptop Solutions Provider</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Class</h2>
+      <p style="text-align: center;">
+       IS218 - Web Applications - Professor Thomas Licciardello 
+      </p>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Our Mission</h2>
+      <p style="text-align: center">
+        To develop an application that allows admins to manage products and user data.
+      </p>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section class="team container my-5">
+      <h2 class="text-center mb-4">Meet Our Team</h2>
+      <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-md-4 text-center">
+          <img
+            src="{% IMG_8894.png %}"
+            alt="Team Member 1"
+            class="rounded-circle mb-3 team-photo"
+          />
+          <h5>Karim Mohamed</h5>
+          <p>Project Manager/Back-end Developer</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-md-4 text-center">
+          <img
+            src="team2.jpg"
+            alt="Team Member 2"
+            class="rounded-circle mb-3 team-photo"
+          />
+          <h5>Member 2</h5>
+          <p>Chief Technology Officer</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-4 text-center">
+          <img
+            src="team3.jpg"
+            alt="Team Member 3"
+            class="rounded-circle mb-3 team-photo"
+          />
+          <h5>Member 3</h5>
+          <p>Head of Marketing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2025 LaptopStore. All rights reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#" class="text-white">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-white">Terms of Service</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-white">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

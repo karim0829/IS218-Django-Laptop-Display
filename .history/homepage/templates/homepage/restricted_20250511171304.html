@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Feedback Page</title>
+
+    <style>
+        table, td, th {
+            border:1px solid black
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Product</th>
+            <th>Rating</th>
+            <th>Message</th>
+            <th>Timestamp</th>
+     </tr>
+        <tr>
+        {% for feedback in feedbacks %}
+
+            <td> {{ feedback.name }}</td>
+            <td> {{ feedback.product }}</td>
+            <td> {{ feedback.rating }}</td>
+            <td> {{ feedback.comment }}</td>
+
+
+
+        </tr>
+    {% endfor %}
+
+    </table>
+   
+
+</ul>
+</body>
+</html>

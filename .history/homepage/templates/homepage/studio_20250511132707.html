@@ -1,0 +1,196 @@
+{% extends 'templates/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Studio Laptops - LaptopStore</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">LaptopStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="HighEndLaptop.html">High End Laptop</a></li>
+        <li class="nav-item active"><a class="nav-link" href="StudioLaptops.html">Studio Laptop</a></li>
+        <li class="nav-item"><a class="nav-link" href="BudgetLaptops.html">Budget Laptop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="container mt-5 mb-4 text-center">
+    <h1>Best Laptops for Studio or School Use (2025)</h1>
+    <p class="text-muted">Optimized for creators, students, and professionals on the go.</p>
+  </header>
+
+  <!-- Products Section -->
+  <section class="container mb-5">
+    <div class="row">
+
+      <!-- MacBook Pro 16” M3 Max -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img class="card-img-top" src="StudioPic/macbookpro16.jpg" alt="MacBook Pro 16 M3 Max" />
+          <div class="card-body">
+            <h5 class="card-title">MacBook Pro 16” M3 Max</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-mac">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details-mac">
+              <div class="card card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>CPU:</strong> Apple M3 Max (16-core CPU, 40-core GPU)</li>
+                  <li><strong>GPU:</strong> Integrated 40-core GPU</li>
+                  <li><strong>Display:</strong> 16.2" Liquid Retina XDR, 3456 x 2234, 120Hz ProMotion</li>
+                  <li><strong>Memory:</strong> Up to 128GB unified RAM</li>
+                  <li><strong>Storage:</strong> Up to 8TB SSD</li>
+                  <li><strong>Battery Life:</strong> Up to 22 hours</li>
+                  <li><strong>Features:</strong> 16-core Neural Engine, ProRes hardware acceleration, macOS optimized for creative workflows</li>
+                  <li><strong>Est. Price:</strong> $3,500–$6,000</li>
+                </ul>
+                <button class="btn btn-success btn-block">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dell XPS 16 -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img class="card-img-top" src="StudioPic/Dellxpx16.jpg" alt="Dell XPS 16" />
+          <div class="card-body">
+            <h5 class="card-title">Dell XPS 16 (2025)</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-dell">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details-dell">
+              <div class="card card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>CPU:</strong> Intel Core Ultra 7 155H (16 cores, up to 4.8 GHz)</li>
+                  <li><strong>GPU:</strong> NVIDIA GeForce RTX 4060, 8GB GDDR6</li>
+                  <li><strong>Display:</strong> 16.3" OLED, 3840 x 2400, 120Hz</li>
+                  <li><strong>Memory:</strong> Up to 64GB LPDDR5X</li>
+                  <li><strong>Storage:</strong> Up to 4TB PCIe NVMe SSD</li>
+                  <li><strong>Features:</strong> InfinityEdge display, AI-enhanced performance, premium build quality</li>
+                  <li><strong>Est. Price:</strong> $2,500–$3,200</li>
+                </ul>
+                <button class="btn btn-success btn-block">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asus Zenbook Pro 16X OLED -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img class="card-img-top" src="StudioPic/Asuszenbook.jpg" alt="Asus Zenbook Pro 16X" />
+          <div class="card-body">
+            <h5 class="card-title">Asus Zenbook Pro 16X OLED</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-asus">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details-asus">
+              <div class="card card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>CPU:</strong> Intel Core i9-13905H (14 cores, up to 5.4 GHz)</li>
+                  <li><strong>GPU:</strong> NVIDIA GeForce RTX 4070, 8GB GDDR6</li>
+                  <li><strong>Display:</strong> 16" OLED, 3840 x 2400, 120Hz, 100% DCI-P3</li>
+                  <li><strong>Memory:</strong> Up to 32GB LPDDR5X</li>
+                  <li><strong>Storage:</strong> Up to 2TB PCIe 4.0 SSD</li>
+                  <li><strong>Features:</strong> ASUS Dial, stylus support, AAS Ultra cooling system</li>
+                  <li><strong>Est. Price:</strong> $2,400–$3,000</li>
+                </ul>
+                <button class="btn btn-success btn-block">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HP Spectre x360 16 -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img class="card-img-top" src="StudioPic/hpspectrex360.jpg" alt="HP Spectre x360" />
+          <div class="card-body">
+            <h5 class="card-title">HP Spectre x360 16 (2025)</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-hp">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details-hp">
+              <div class="card card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>CPU:</strong> Intel Core Ultra 7 155H (up to 4.8 GHz)</li>
+                  <li><strong>GPU:</strong> NVIDIA GeForce RTX 4050, 6GB GDDR6</li>
+                  <li><strong>Display:</strong> 16" OLED touch, 3840 x 2400, IMAX Enhanced</li>
+                  <li><strong>Memory:</strong> Up to 32GB LPDDR5X</li>
+                  <li><strong>Storage:</strong> Up to 2TB PCIe NVMe SSD</li>
+                  <li><strong>Features:</strong> 2-in-1 convertible design, AI-enhanced performance, stylus included</li>
+                  <li><strong>Est. Price:</strong> $1,700–$2,500</li>
+                </ul>
+                <button class="btn btn-success btn-block">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Microsoft Surface Laptop Studio 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img class="card-img-top" src="StudioPic/SurfaceStudio2.jpg" alt="Surface Laptop Studio 2" />
+          <div class="card-body">
+            <h5 class="card-title">Surface Laptop Studio 2</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-surface">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details-surface">
+              <div class="card card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>CPU:</strong> Intel Core i7-13800H (14 cores, up to 5.2 GHz)</li>
+                  <li><strong>GPU:</strong> NVIDIA GeForce RTX 4060 or RTX 4050, 8GB GDDR6</li>
+                  <li><strong>Display:</strong> 14.4" PixelSense Flow, 2400 x 1600, 120Hz, touchscreen</li>
+                  <li><strong>Memory:</strong> Up to 64GB LPDDR5X</li>
+                  <li><strong>Storage:</strong> Up to 2TB SSD</li>
+                  <li><strong>Features:</strong> Dynamic woven hinge for studio/tablet modes, Surface Slim Pen 2 support, haptic touchpad</li>
+                  <li><strong>Est. Price:</strong> $2,000–$3,000</li>
+                </ul>
+                <button class="btn btn-success btn-block">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end of .row -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 LaptopStore. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+        <li class="list-inline-item"><a href="support.html" class="text-white">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+ 

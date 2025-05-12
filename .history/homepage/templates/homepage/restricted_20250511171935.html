@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Feedback Page</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        table, td, th {
+            border:1px solid black;
+            margin-left:auto;
+            margin-right:auto;
+            padding:15px;
+        }
+        
+        * {
+            text-align: center;
+        }
+        tr:nth-child(even) {
+  background-color: #ecebeb;
+}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <h1> User Feedback Report</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Product</th>
+            <th>Rating</th>
+            <th>Message</th>
+            <th>Timestamp</th>
+     </tr>
+        <tr>
+        {% for feedback in feedbacks %}
+
+            <td> {{ feedback.name }}</td>
+            <td> {{ feedback.product }}</td>
+            <td> {{ feedback.rating }}</td>
+            <td> {{ feedback.comment }}</td>
+            <td> {{ feedback.timestamp }}</td>
+
+
+
+
+        </tr>
+    {% endfor %}
+
+    </table>
+   
+
+</body>
+</html>

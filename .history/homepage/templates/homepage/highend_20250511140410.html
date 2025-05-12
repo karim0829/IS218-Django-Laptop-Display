@@ -1,0 +1,41 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block title %}High End Laptops{% endblock %}
+
+{% block content %}
+<header class="container mt-5 mb-4 text-center">
+  <h1>Best Overall Gaming Laptops (2025)</h1>
+  <p class="text-muted">Discover top-tier performance, cutting-edge features, and unmatched power.</p>
+</header>
+
+<section class="container mb-5">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        {% if product.image %}
+        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+        {% else %}
+        <img class="card-img-top" src="{% static 'Pic/placeholder.jpg' %}" alt="No Image Available">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p><strong>Price:</strong> ${{ product.price }}</p>
+          <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details-{{ forloop.counter }}">
+            View Details
+          </button>
+          <div class="collapse mt-3" id="details-{{ forloop.counter }}">
+            <div class="card card-body">
+              <p>{{ product.description }}</p>
+              <button class="btn btn-success btn-block">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

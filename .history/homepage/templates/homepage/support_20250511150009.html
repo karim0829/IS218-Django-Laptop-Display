@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support - LaptopStore</title>
+    <!-- Bootstrap CSS for layout and components -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">LaptopStore</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- You may use the same navigation options from your main site -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'highend' %}">High End Laptop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="StudioLaptops.html">Studio Laptop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="BudgetLaptops.html">Budget Laptop</a>
+          </li>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="support.html">Support</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Support Hero Section -->
+    <section class="support-hero text-center">
+      <div class="support-hero-overlay">
+        <div class="container">
+          <h1 class="display-4 text-white">Support Center</h1>
+          <p class="lead text-white">
+            We’re here to help you with your questions and concerns
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div id="faqAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                How do I track my order?
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#faqAccordion"
+          >
+            <div class="card-body">
+              You can track your order by visiting the order tracking section on
+              our website and entering your order ID.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                What is your return policy?
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#faqAccordion"
+          >
+            <div class="card-body">
+              Our return policy allows you to return most items within 30 days
+              of purchase. Please check our returns page for more details.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                How do I contact customer service?
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#faqAccordion"
+          >
+            <div class="card-body">
+              You can contact our customer service team via phone, email, or by
+              filling out the contact form on this page.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Form Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Contact Support</h2>
+      <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{ form.as_p }}
+
+    
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'support' %}" class="text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'about' %}" class="text-white">About Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Facebook</a></li>
+              <li><a href="#" class="text-white">Twitter</a></li>
+              <li><a href="#" class="text-white">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          &copy; 2025 LaptopStore. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

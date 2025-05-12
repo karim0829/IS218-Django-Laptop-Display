@@ -1,0 +1,47 @@
+{% extends 'homepage/base.html' %}
+
+{% load static %}
+
+{% block title %}Budget{% endblock %}
+
+{% block content %} 
+
+<!-- Header -->
+  <header class="container mt-5 mb-4 text-center">
+    <h1>Best Laptops for Studio or School Use (2025)</h1>
+    <p class="text-muted">Affordable options without compromising on performance.
+
+</p>
+  </header>
+
+  <!-- Products Section -->
+  <section class="container mb-5">
+    <div class="row">
+      {% for product in products %}
+      <!-- Razer Blade 16 -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          {% if product.image %}
+          <img class="card-img-top" src="{{  product.image.url }}" alt="{{ product.name }}" />
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <button class="btn btn-outline-primary btn-block" data-toggle="collapse" data-target="#details--{{ forloop.counter }}">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="details--{{ forloop.counter }}">
+              <div class="card card-body">
+              <p>{{ product.description }}</p>
+              <p><b>Price:</b> ${{ product.price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     {% endfor %}
+
+    </div>
+  </section>
+
+  {% endblock %}

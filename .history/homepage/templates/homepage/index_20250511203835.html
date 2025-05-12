@@ -1,0 +1,27 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Featured Products Section -->
+<section class="container my-5">
+  <h2 class="mb-4">Featured Laptops & Deals</h2>
+  <div class="row">
+
+    {% for product in products %}
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card product-card">
+        <img class="card-img-top" src="{% static product.image %}" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <a href="{% url 'highend' %}" class="btn btn-primary btn-block">Learn More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+
+
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block title %}Home {% endblock %}
+
+{% block content %}
+
+    <!-- Featured Products Section -->
+    <section class="container my-5">
+      <h2 class="mb-4">Featured Laptops & Deals</h2>
+      <div class="row">
+        <!-- High-End Laptop: Razer Blade 16 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card product-card">
+            <img class="card-img-top"alt="Razer Blade 16" />
+            <div class="card-body">
+                  {% for product in products %}
+
+              <h5 class="card-title">Razer Blade 16 (2025)</h5>
+              
+              <a href="{% url 'highend' %}" class="btn btn-primary btn-block">Learn More</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Studio Laptop: MacBook Pro 16” M3 Max -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card product-card">
+            <img class="card-img-top" src="{% static 'homepage/StudioPic/macbookpro16.jpg' %}" alt="MacBook Pro 16" />
+            <div class="card-body">
+              <h5 class="card-title">MacBook Pro 16” M3 Max</h5>
+              
+              <a href="{% url 'studio' %}" class="btn btn-primary btn-block">Learn More</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Budget Laptop: Acer Aspire Go 15 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card product-card">
+            <img class="card-img-top" src="BudgetPic/AcerAspireGo15.jpg" alt="Acer Aspire Go 15" />
+            <div class="card-body">
+              <h5 class="card-title">Acer Aspire Go 15</h5>
+              
+              <a href="{% url 'budget' %}" class="btn btn-primary btn-block">Learn More</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Random Laptop: ASUS ROG Flow Z13 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card product-card">
+            {% load static %}
+            <img class="card-img-top" src="{% static 'homepage/Pic/RazerBlade16.jpg' %}" alt="ASUS ROG Flow Z13" />
+            <div class="card-body">
+              <h5 class="card-title">ASUS ROG Strix Scar 18</h5>
+              
+              <a href="{% url 'highend' %}" class="btn btn-primary btn-block">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+   
+
+    {% endblock %}
